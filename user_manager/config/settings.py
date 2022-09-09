@@ -15,7 +15,6 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
@@ -26,7 +25,6 @@ SECRET_KEY = '^2*8*u8dda8%uqeuyvcav+t_x_x#-o_wk-3)8toe!@a6!bc^1v'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -39,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # Third Party Apps
     'django_grpc_framework',
+    # Local Apps
+    'users',
 ]
 
 MIDDLEWARE = [
@@ -70,7 +70,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'config.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
