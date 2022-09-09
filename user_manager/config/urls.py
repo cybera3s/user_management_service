@@ -1,4 +1,4 @@
-from grpc_utils.user_proto import user_pb2_grpc
+from grpc_utils.user_proto_code import user_pb2_grpc
 from users.services import UserService
 
 urlpatterns = []
