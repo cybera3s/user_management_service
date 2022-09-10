@@ -1,0 +1,9 @@
+venv
+.idea
+**/__pycache__/
+.git
+.gitignore
+Dockerfile
+.dockerignore
+*_pb2*
+*/db.sqlite3
