@@ -48,7 +48,6 @@ nano user_management_service/user_manager/.env
    ```
 Add these required Configurations to .env file for GRPC server:
 ```sh
-DEBUG=False
 SECRET_KEY=<your secret key>
 
 POSTGRES_DBNAME=<database name>
@@ -66,7 +65,6 @@ nano gateway_api/gateway_api/.env
    ```
 Add these required Configurations to .env file for GRPC Client:
 ```sh
-DEBUG=True
 SECRET_KEY=<your secret key>
 
 ALLOWED_HOSTS=<host1,host2,...> or '*'
