@@ -16,7 +16,6 @@ import environ
 # environment variables schema
 env = environ.Env(
     SECRET_KEY=(str, 'thf7^bx2ngwo=%)5#0mi#$i-g5iv-dk08q$wti**u%#=_xmr&!'),
-    DEBUG=(bool, True),
     POSTGRES_DBNAME=(str, 'postgres'),
     POSTGRES_USER=(str, 'postgres'),
     POSTGRES_PASSWORD=(str, 'pass'),
@@ -32,7 +31,7 @@ environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = env('DEBUG')
+DEBUG = True
 
 ALLOWED_HOSTS = []
 
