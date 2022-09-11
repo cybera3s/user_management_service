@@ -3,5 +3,5 @@
 venv
 db.sqlite3
 ~*
-__pycache__
-user_proto_code
+**/__pycache__
+*_pb2*
