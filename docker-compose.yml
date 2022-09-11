@@ -6,7 +6,7 @@ services:
     container_name: gateway
     build:
         context: .
-        dockerfile: gateway/Dockerfile
+        dockerfile: gateway_api/Dockerfile
     image: "cybera3s/gateway"
     networks:
         - microservices
