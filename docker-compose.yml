@@ -27,13 +27,10 @@ services:
     restart: always
     depends_on:
       - 'db'
-#
-#
+
   db:
     container_name: postgres
     image: postgres:alpine
-
-#    env_file: ${PWD}/user_management/user_manager/.env
     environment:
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-pass}
       POSTGRES_USER: ${POSTGRES_USER:-postgres}
