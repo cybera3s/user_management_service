@@ -9,10 +9,10 @@ ENV PYTHONUNBUFFERED 1
 WORKDIR /management
 
 # copy and install requirements
-ADD user_management/requirements.txt .
+ADD user_management_service/requirements.txt .
 # RUN python -m pip install --upgrade pip
 RUN pip install -r requirements.txt
-ADD user_management/user_manager/ .
+ADD user_management_service/user_manager/ .
 
 # RUN python -m pip install --upgrade pip
 RUN python3 -m pip install -r requirements.txt
