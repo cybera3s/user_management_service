@@ -8,6 +8,8 @@ services:
         context: .
         dockerfile: gateway_api/Dockerfile
     image: "cybera3s/gateway"
+    environment:
+      GRPC_SERVER_HOST: 'management'
     networks:
         - microservices
     ports:
