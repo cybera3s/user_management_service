@@ -1,0 +1,49 @@
+version: "3.8"
+
+services:
+
+  gateway:
+    container_name: gateway
+    build:
+        context: .
+        dockerfile: gateway/Dockerfile
+    image: "cybera3s/gateway"
+    networks:
+        - microservices
+    ports:
+        - "1234:8000"
+    restart: always
+    depends_on:
+      - 'db'
+
+  management:
+    container_name: manager
+    build:
+        context: .
+        dockerfile: user_management/Dockerfile
+    image: "cybera3s/manager"
+    networks:
+        - microservices
+    restart: always
+    depends_on:
+      - 'db'
+#
+#
+  db:
+    container_name: postgres
+    image: postgres:alpine
+
+#    env_file: ${PWD}/user_management/user_manager/.env
+    environment:
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-pass}
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_DB: ${POSTGRES_DBNAME:-postgres}
+    networks:
+          - microservices
+    restart: always
+
+    
+networks:
+    microservices:
+    
+
