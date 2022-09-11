@@ -1,6 +1,6 @@
 from .models import User
 from django_grpc_framework import proto_serializers
-from grpc_utils.user_proto_code import user_pb2
+from grpc_utils.protos import user_pb2
 
 
 class UserProtoSerializer(proto_serializers.ModelProtoSerializer):
