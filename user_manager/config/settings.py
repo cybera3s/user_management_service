@@ -11,6 +11,18 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+import environ
+
+# environment variables schema
+env = environ.Env(
+    SECRET_KEY=(str, 'thf7^bx2ngwo=%)5#0mi#$i-g5iv-dk08q$wti**u%#=_xmr&!'),
+    DEBUG=(bool, True),
+    POSTGRES_DBNAME=(str, 'postgres'),
+    POSTGRES_USER=(str, 'postgres'),
+    POSTGRES_PASSWORD=(str, 'pass'),
+    POSTGRES_HOST=(str, 'db'),
+    POSTGRES_PORT=(int, 5432)
+)
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
