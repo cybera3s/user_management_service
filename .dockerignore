@@ -6,4 +6,4 @@ venv
 Dockerfile
 .dockerignore
 *_pb2*
-*/db.sqlite3
+db.sqlite3
