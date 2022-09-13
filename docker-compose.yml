@@ -24,6 +24,8 @@ services:
         context: .
         dockerfile: user_management_service/Dockerfile
     image: "cybera3s/manager"
+    environment:
+      POSTGRES_HOST_NAME: 'db'
     networks:
         - microservices
     restart: always
